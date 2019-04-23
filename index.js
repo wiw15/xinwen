@@ -63,7 +63,7 @@ app.post("/upload",upload.single("file"),(req,res)=>{
   var suff = src.substring(i3,src.length);
   var des = "./public/img/user"+fTime+fRand+suff;
   var dre = des.slice(9);
-  var dd="http://127.0.0.1:3000/"+dre;
+  var dd=dre;
   //将临时文件移动到./public/img/user目录下
   fs.renameSync(req.file.path,des)
   res.send({code:1,msg:"图片上传成功",dd})
@@ -73,10 +73,10 @@ app.post("/upload",upload.single("file"),(req,res)=>{
 //轮播图
 app.get("/getImages",(req,res)=>{
     var rows = [
-      {id:1,img_url:"http://127.0.0.1:3000/img/1.jpg"},
-      {id:2,img_url:"http://127.0.0.1:3000/img/2.jpg"},
-      {id:3,img_url:"http://127.0.0.1:3000/img/3.jpg"},
-      {id:4,img_url:"http://127.0.0.1:3000/img/4.jpg"}
+      {id:1,img_url:"img/1.jpg"},
+      {id:2,img_url:"img/2.jpg"},
+      {id:3,img_url:"img/3.jpg"},
+      {id:4,img_url:"img/4.jpg"}
     ];
     res.send(rows);
   });

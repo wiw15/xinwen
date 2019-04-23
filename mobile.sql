@@ -2,7 +2,7 @@
 -- DROP DATABASE IF EXISTS mobile;
 -- CREATE DATABASE mobile CHARSET=UTF8;
 -- USE mobile;
-#用户注册
+-- #用户注册
 CREATE TABLE moli_login(
   id INT PRIMARY KEY AUTO_INCREMENT,
   name VARCHAR(25),
@@ -12,10 +12,10 @@ CREATE TABLE moli_login(
   phone VARCHAR(11)
 );
 INSERT INTO moli_login VALUES
-(null,'tom','为何你要那没坏','user/01.jpg',md5('123456'),'18576769545'),
+(null,'tom','为何你要那没坏','img/user/01.jpg',md5('123456'),'18576769545'),
 (null,'jerry','看i还有','img/user/02.jpg',md5('123456'),'15645687552');
 
-#新闻内容
+-- #新闻内容
 CREATE TABLE moli_tent(
   id INT PRIMARY KEY AUTO_INCREMENT,
   lid INT,
@@ -37,7 +37,7 @@ INSERT INTO moli_tent VALUES
 (null,9,'科技','随着全新胜达上市日期的临近，其部分配置信息也被曝光,现代全新胜达部分配置曝光 3月正式上市。','img/recom/qi01.jpg',now(),1),
 (null,10,'生活','看过太多贴子随便在欧洲捞一个毫无辨识度的清静点的古城镇，便冠以童话之名，觉得这个词如今就像“美女”一样不值钱。。','img/recom/you01.jpg',now(),1);
 
-#小视频
+-- #小视频
 CREATE TABLE moli_video(
   id INT PRIMARY KEY AUTO_INCREMENT,
   uname VARCHAR(10),
@@ -58,7 +58,7 @@ INSERT INTO moli_video VALUES
 (null,'超萌小视频','img/x.mp4',4785,now(),1),
 (null,'超萌小视频','img/x.mp4',8452,now(),1);
 
-#国风内容
+-- #国风内容
 CREATE TABLE moli_toms(
   id INT PRIMARY KEY AUTO_INCREMENT,
   lid INT,
@@ -83,7 +83,7 @@ INSERT INTO moli_toms VALUES
 (null,19,'老年藏漂','他蹬三轮无数次穿过文青们的朝圣路','img/recom/lao01.jpg','img/recom/lao02.jpg','img/recom/lao03.jpg',12546,now(),1),
 (null,20,'网红','我去见了红遍网络的冰花男孩，他说“我不是明星，我就是我','img/recom/hong01.jpg','img/recom/hong02.jpg','img/recom/hong03.jpg',16246,now(),1);
 
-#新闻内容
+-- #新闻内容
 CREATE TABLE moli_nba(
   id INT PRIMARY KEY AUTO_INCREMENT,
   lid INT,
@@ -105,7 +105,7 @@ INSERT INTO moli_nba VALUES
 (null,28,'一切都关于韦德','韦德带给热火的，不仅仅是场上的贡献，他提供的是无以伦比的领导力，告诉年轻球员，什么是勇气，什么是职业','img/recom/abn11.jpg',now(),64552,1),
 (null,29,'沃克颈部受伤提前离场','本场比赛中，阿德托昆博贡献34分14篮板3抢断3盖帽，布罗格登入账19分5篮板1抢断，布莱德索斩获18分1抢断1盖帽。黄蜂方面，巴图姆入账19分6篮板，兰姆拿下16分，麦基吉砍下16分7篮板2抢断。','img/recom/abn16.jpg',now(),64146,1),
 (null,30,'勇士拿下九连胜','在这短短的7天里，勇士又赢下了3场比赛，加上此前的6场球，他们已经豪取了一波9连胜。','img/recom/abn21.jpg',now(),232,1);
-#详情
+-- #详情
 CREATE TABLE moli_details(
   id INT PRIMARY KEY AUTO_INCREMENT,
   lid INT,
@@ -154,7 +154,7 @@ INSERT INTO moli_details VALUES
 (null,29,'字母哥狂砍34+14雄鹿胜黄蜂 沃克伤退仅得10分','本场比赛中，阿德托昆博贡献34分14篮板3抢断3盖帽，布罗格登入账19分5篮板1抢断，布莱德索斩获18分1抢断1盖帽。黄蜂方面，巴图姆入账19分6篮板，兰姆拿下16分，麦基吉砍下16分7篮板2抢断。','比赛进行到第四节仅剩2分9秒时，沃克在争抢篮板时不慎被字母哥压到颈部，随后痛苦倒地。过了两三分钟沃克才艰难起身，在工作人员的搀扶下走回了更衣室，字母哥也过来表达了歉意。沃克受伤前发挥不佳，12投仅3中拿到10分5篮板3助攻。','黄蜂频飙三分，全队本节投11粒三分球，但命中率仅为36.36%。首节战罢，黄蜂以27-22领先。','黄蜂多次冲击篮筐，获得11次罚球机会，罚中10球，罚球命中率达到90.91%。半场结束，黄蜂仅以2分的领先优势进入下一节。','黄蜂频飙三分，全队本节投11粒三分球，但命中率仅为0.00%。比赛结束，雄鹿以108-99战胜黄蜂，取得本场比赛的胜利。','img/recom/abn16.jpg','img/recom/abn17.jpg','img/recom/abn18.jpg','img/recom/abn19.jpg','img/recom/abn20.jpg',now()),
 (null,30,'勇士就这样拿下九连胜 说NBA大结局还有人不同意吗?','在姜文的名作《让子弹飞》里，他本人所饰演的张麻子曾经对反派黄四郎说过一句意味深长的话，“你对我不重要，没有你对我很重要。”','的确，勇士并不好带，正如老将大卫-韦斯特所言，球队在2018年季后赛期间便生出了矛盾，不过，他们在不公开的情况下借助更衣室的有利环境解决了一些问题。','到了本赛季，因为库里一段时间伤缺，纸里还是包不住火。格林和杜兰特是吵了个痛快，可科尔就难熬了，当他执教勇士生涯首次遭遇四连败后，媒体连“掷弹筒”都架好了','而当考辛斯准备复出后，勇士那种“惊喜”的程度甚至可以够得上“惊吓”。未及首秀，训练中考神隔扣杜兰特的精彩花絮先了解一下。','勇士也一样，连续四年打骑士都打厌了，好不容易詹姆斯走了，终于可以换个新对手了。既然奔着三连冠，如果这个赛季真的是每个系列赛都横扫，我相信他们会更早解散','img/recom/abn21.jpg','img/recom/abn22.jpg','img/recom/abn23.jpg','img/recom/abn24.jpg','img/recom/abn25.jpg',now());
 
-#评论
+-- #评论
 CREATE TABLE moli_critic(
   id INT PRIMARY KEY AUTO_INCREMENT,
   lid INT,
